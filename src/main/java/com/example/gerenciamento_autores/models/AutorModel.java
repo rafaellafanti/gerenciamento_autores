@@ -2,7 +2,7 @@ package com.example.gerenciamento_autores.models;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "tb_autor")
@@ -18,7 +18,7 @@ public class AutorModel {
     @Column(name = "nacionalidade_autor")
     private String nacionalidade;
 
-    private LocalDateTime dataNascimento;
+    private LocalDate dataNascimento;
 
     public Long getId() {
         return id;
@@ -44,11 +44,11 @@ public class AutorModel {
         this.nacionalidade = nacionalidade;
     }
 
-    public LocalDateTime getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(LocalDateTime dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
